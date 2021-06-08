@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.App{
+  width: 100vw;
+  height: 100vh;
+}
 
 @font-face {
   font-family: 'Ruhl';
@@ -62,6 +66,7 @@ a{
 }
 a:hover{
   color: var(--special-coloor);
+  text-decoration: underline;
 }
 .flex{
   display: flex;
@@ -139,21 +144,6 @@ nav{
   height: 100%;
   object-fit: cover;
 }
-.plant{
-  position: absolute;
-  bottom: 0;
-  left: -20%;
-  z-index: -1;
-  transform: translate(10%) rotateZ(-10deg) rotateX(-90deg);
-  animation: plant-entrance 1.5s ease-in-out 0.7s forwards,
-  plant-shake 2.5s infinite ease alternate-reverse 2s ;
-  transform-origin: bottom;
-  max-height: 80%;
-}
-.plant2{
-  left: 40%;
-  
-}
 
 /* Animations */
 
@@ -166,6 +156,7 @@ nav{
   }
 }
 
+/* This was for an earlier version of the website thath had animations */
 /* @keyframes plant-entrance {
   from{
       transform: translate(10%) rotateZ(-10deg) rotateX(-90deg);
@@ -264,7 +255,6 @@ nav{
   min-height: 90vh;
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 .form-wrapper{
@@ -285,15 +275,21 @@ nav{
   border: none;
   border-radius: 1rem;
   padding: 1rem;
+  outline-color: none;
 }
-.form-wrapper button{
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+.form-wrapper .button{
   padding: 1rem;
   width: 100%;
   background: var(--special-coloor);
   color: white;
   border: none;
   border-radius: 1rem;
+  cursor: pointer;
 }
+
 .form-wrapper h2{
   margin-bottom: 5rem;
 }
@@ -306,8 +302,8 @@ nav{
   border: none;
 }
 
-.contact img{
-  flex: 1 1 40rem;
+.contact .img{
+  flex: 1 1 20rem;
   
 }
 /* FOOTER */
@@ -387,7 +383,7 @@ footer h4{
       padding: 3rem 4rem;
   }
 
-  /* Gallery */
+  /* Gallery Queries */
   .gallery img{
       grid-row: auto;
       grid-column: auto;
@@ -398,6 +394,7 @@ footer h4{
   .gallery-head{
       padding: 2rem 3rem;
   }
+  
   .contact img{
       display: none;
   }

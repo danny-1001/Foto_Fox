@@ -25,7 +25,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Foto Fox | Photography Website</title>
+    <title>FotoFox | Photography Website</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -43,10 +43,77 @@
     
   </body>
 </html>
+<script >
+  const nav = document.querySelector(".nav-links");
+const burger = document.querySelector(".burger");
+const links = nav.querySelectorAll("a");
+
+burger.addEventListener("click" , () =>{
+    nav.classList.toggle("nav-open");
+    burger.classList.toggle("toggle");
+});
+
+links.forEach(link =>{
+    link.addEventListener("click", ()=>{
+        nav.classList.toggle("nav-open");
+        burger.classList.toggle("toggle");
+    })
+})
+
+</script>
 <script class="formspree" src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     <script>
        window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-       formbutton("create", {action: action="https://formspree.io/f/mgerkdpl"})
+       formbutton("create", {
+         action: action="https://formspree.io/f/mgerkdpl",
+         title: "Contact Us!", 
+    
+    
+    fields: [{
+        name: "email",
+        type: "email",
+        label: "Email",
+        required: true
+      },
+      {
+        name: "Message",
+        type: "textarea"
+      },
+      {
+        type: "submit"
+      }],
+      // Style
+        styles: {
+        fontFamily:'"Times New Roman", sans-serif',
+        button: {
+          background: "#87428b"
+        },
+        title: {
+          background: "#87428b",
+          letterSpacing: "0.05em",
+          textTransform: "uppercase",
+          fontSize:"1.5rem"
+        },
+        description:{
+            background:"white",
+            color:"#87428b",
+            fontSize:"1.5rem"
+        },
+        input:{
+            background:"#414141",
+            color:"white",
+            fontSize:"1.5rem",
+            borderRadius:"0.4rem"
+
+        },
+        submitInput:{
+            background:"#87428b",
+            color:"white",
+            fontSize:"1.3rem"
+        }, 
+            
+      },
+        })
     </script>
-<script src="/photo-react/src/components/Burger.js" ></script>
+
 
