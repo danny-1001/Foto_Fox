@@ -17,7 +17,7 @@ as well as a link back to this github.
 
 Mobile, Tablet, and desktop responsivness and accesibility.
 
-# What I leeanred
+# What I leanred
 In this project, I learned:
 
 How to ask better questions to google. 
