@@ -1,3 +1,40 @@
+# What is FotoFox?
+This applicaton (FotoFox) is a photography website I created. 
+
+The images used were part of a collaboration between 3 great photographers. 
+
+The site has the following features:
+
+Functional form using Email.js. When the form is submitted, the information is sent to the email of 
+whoever owns the form, in this case, me.
+
+Functional chat-box using formspree.io that also takes in information and sends it to email of owner.
+
+Mini gallery section styled with css-grid.
+
+Footer with links that go to one of the photographer's instagram
+as well as a link back to this github.
+
+Mobile, Tablet, and desktop responsivness and accesibility.
+
+# What I leanred
+In this project, I learned:
+
+How to ask better questions to google. 
+
+How to create a functional form with email.js.
+
+How to style and implement a functional chat-box.
+
+How to handle the code in the html document in React.
+
+How to create a burger button in a different way.
+
+
+------------------------------------------------
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
