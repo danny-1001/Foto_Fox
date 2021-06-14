@@ -13,7 +13,7 @@ function Main() {
                 <a href="#gallery">Gallery</a>
             </div>
             <div className="hero-images">
-                <img className="hero-elena" src="/images/marywenphotography.jpg" alt="image of woman under water" />
+                <img className="hero-elena" src="/images/marywenphotography.jpg" alt="Man walking along a path on a hill." />
             </div>
             </section>
             </main>

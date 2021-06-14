@@ -1,12 +1,11 @@
-import React from 'react';
-import './App.css';
-import Header from './components/Header'
-import Main from './components/Main';
-import Footer from './components/Footer';
-import About from './components/About';
-import Gallery from './components/Gallery';
-import ContactUs from './components/Contact';
-
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Gallery from "./components/Gallery";
+import ContactUs from "./components/Contact";
 
 function App() {
   return (
@@ -20,6 +19,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
