@@ -9,7 +9,7 @@
       name="description"
       content="Photography website with pictures from multiple photographers"
     />
-    <meta name="robots" content="index,follow"/>
+    <meta name="robots" content="index,follow" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -40,80 +40,113 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    
   </body>
 </html>
-<script >
-  const nav = document.querySelector(".nav-links");
-const burger = document.querySelector(".burger");
-const links = nav.querySelectorAll("a");
 
-burger.addEventListener("click" , () =>{
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<!-- Menu Burger -->
+<script>
+  const nav = document.querySelector(".nav-links");
+  const burger = document.querySelector(".burger");
+  const links = nav.querySelectorAll("a");
+
+  burger.addEventListener("click", () => {
     nav.classList.toggle("nav-open");
     burger.classList.toggle("toggle");
-});
+  });
 
-links.forEach(link =>{
-    link.addEventListener("click", ()=>{
-        nav.classList.toggle("nav-open");
-        burger.classList.toggle("toggle");
-    })
-})
-
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.toggle("nav-open");
+      burger.classList.toggle("toggle");
+    });
+  });
 </script>
-<script class="formspree" src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-    <script>
-       window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-       formbutton("create", {
-         action: action="https://formspree.io/f/mgerkdpl",
-         title: "Contact Us!", 
-    
-    
-    fields: [{
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  $("#submit").click(function () {
+    var name = $("#name").val();
+    var email = $("#email").val();
+
+    if (name == "" || email == "") {
+      swal({
+        title: "Field are Empty",
+        text: "Please submit your name and email",
+        icon: "error",
+        button: "OK",
+      });
+    } else {
+      swal({
+        title: "Thank you!",
+        text: "Succesfully submitted",
+        icon: "success",
+        button: "OK",
+      });
+    }
+  });
+</script>
+
+<!-- Chat-Box -->
+<script
+  class="formspree"
+  src="https://formspree.io/js/formbutton-v1.min.js"
+  defer
+></script>
+<script>
+  window.formbutton =
+    window.formbutton ||
+    function () {
+      (formbutton.q = formbutton.q || []).push(arguments);
+    };
+  formbutton("create", {
+    action: (action = "https://formspree.io/f/mgerkdpl"),
+    title: "Contact Us!",
+
+    fields: [
+      {
         name: "email",
         type: "email",
         label: "Email",
-        required: true
+        required: true,
       },
       {
         name: "Message",
-        type: "textarea"
+        type: "textarea",
       },
       {
-        type: "submit"
-      }],
-      // Style
-        styles: {
-        fontFamily:'"Times New Roman", sans-serif',
-        button: {
-          background: "#87428b"
-        },
-        title: {
-          background: "#87428b",
-          letterSpacing: "0.05em",
-          textTransform: "uppercase",
-          fontSize:"1.5rem"
-        },
-        description:{
-            background:"white",
-            color:"#87428b",
-            fontSize:"1.5rem"
-        },
-        input:{
-            background:"#414141",
-            color:"white",
-            fontSize:"1.5rem",
-            borderRadius:"0.4rem"
-
-        },
-        submitInput:{
-            background:"#87428b",
-            color:"white",
-            fontSize:"1.3rem"
-        }, 
-            
+        type: "submit",
       },
-        })
-    </script>
-
-
+    ],
+    // Style
+    styles: {
+      fontFamily: '"Times New Roman", sans-serif',
+      button: {
+        background: "#87428b",
+      },
+      title: {
+        background: "#87428b",
+        letterSpacing: "0.05em",
+        textTransform: "uppercase",
+        fontSize: "1.5rem",
+      },
+      description: {
+        background: "white",
+        color: "#87428b",
+        fontSize: "1.5rem",
+      },
+      input: {
+        background: "#414141",
+        color: "white",
+        fontSize: "1.5rem",
+        borderRadius: "0.4rem",
+      },
+      submitInput: {
+        background: "#87428b",
+        color: "white",
+        fontSize: "1.3rem",
+      },
+    },
+  });
+</script>

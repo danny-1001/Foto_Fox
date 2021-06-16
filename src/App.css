@@ -282,6 +282,7 @@ textarea:focus,
 select:focus {
   outline: none;
 }
+
 .form-wrapper .button {
   padding: 1rem;
   width: 100%;
@@ -327,7 +328,7 @@ footer h4 {
   flex: 3 1 40rem;
   font-size: calc(1.5rem + 1vw);
 }
-footer h4 a{
+footer h4 a {
   color: var(--text);
 }
 
@@ -356,7 +357,7 @@ footer h4 a{
     font-size: var(--header3);
     text-decoration: none;
   }
-  .nav-links a:hover{
+  .nav-links a:hover {
     color: white;
     text-decoration: underline;
   }
@@ -370,7 +371,6 @@ footer h4 a{
     flex-direction: column;
     align-items: center;
     transition: transform 1s ease;
-   
   }
   .nav-open {
     transform: translateX(-100%);
