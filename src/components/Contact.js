@@ -10,7 +10,7 @@ export default function ContactUs() {
         "service_cg80r2q",
         "template_9gtz8ib",
         e.target,
-        "user_7MjyIZRGK6YJxqnVWa0UQ"
+        // "user_7MjyIZRGK6YJxqnVWa0UQ"
       )
       .then(
         (result) => {

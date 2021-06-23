@@ -34,6 +34,14 @@ html {
   --grey-text: #525252;
   scroll-behavior: smooth;
 }
+.swal-button {
+  border-radius: .5rem;
+  background-color: var(--special-coloor);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  border: none;
+  
+}
+
 
 h1 {
   font-size: var(--header1);
